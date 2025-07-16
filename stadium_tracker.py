@@ -41,7 +41,10 @@ def fetch_games(user):
     rows = cur.fetchall()
     cur.close()
     conn.close()
-    return rows
+    import pandas as pd  # make sure this is at the top of your file
+
+return pd.DataFrame(rows, columns=["Stadium", "Team 1", "Team 2", "Winner", "Game Date"])
+
 
 # --- Streamlit App ---
 st.title("🏟️ My Personal Stadium Tracker")
@@ -71,7 +74,12 @@ with st.form("add_game_form"):
 
 # --- Display Logged Games ---
 st.markdown("## 📋 Your Logged Games")
-games = fetch_games("Dillon Singh")  # hardcoded for MVP
+
+
+
+if name:
+    games = fetch_games(name)
+
 if games:
     st.dataframe(games, use_container_width=True)
 else:
