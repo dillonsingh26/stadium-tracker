@@ -47,7 +47,7 @@ def fetch_games(user):
 
 
 # --- Streamlit App ---
-st.title("🏟️ My Personal Stadium Tracker")
+st.title(" My Personal Stadium Tracker")
 
 st.header("➕ Add a Game You Attended")
 
@@ -73,17 +73,17 @@ with st.form("add_game_form"):
             st.success("Game successfully added!")
 
 # --- Display Logged Games ---
-st.markdown("## 📋 Your Logged Games")
+st.markdown("##  Your Logged Games")
 
 
+if user_name:
+    games = fetch_games(user_name)
 
-if name:
-    games = fetch_games(name)
+    if not games.empty:
+        st.dataframe(games, use_container_width=True)
+    else:
+        st.info("No games logged yet.")
 
-if games:
-    st.dataframe(games, use_container_width=True)
-else:
-    st.info("No games logged yet.")
 
 
 
