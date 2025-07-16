@@ -9,7 +9,7 @@ def get_connection():
         host="aws-0-us-east-2.pooler.supabase.com",
         dbname="postgres",
         user="postgres.yguikznmzbkidxouchyf",
-        password="Nevertolate24",  # use your actual password
+        password="#Nevertolate24",  # use your actual password
         port="6543",
         sslmode="require"
     )
