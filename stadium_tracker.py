@@ -8,11 +8,12 @@ def get_connection():
     return psycopg2.connect(
         host="aws-0-us-east-2.pooler.supabase.com",
         dbname="postgres",
-        user="postgres.yguikznmzbkidxouchyf",
-        password="#Nevertolate24",  # use your actual password
+        user="postgres",  # <-- this is the key fix
+        password="#Nevertoolate24",
         port="6543",
-        sslmode="require"
+        sslmode="require"  # <-- necessary for remote connections
     )
+
 
 
 
