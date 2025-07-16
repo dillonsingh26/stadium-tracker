@@ -52,7 +52,7 @@ st.title(" My Personal Stadium Tracker")
 st.header("➕ Add a Game You Attended")
 
 with st.form("add_game_form"):
-    user_name = st.text_input("Your Name", value="Dillon Singh")
+    user_name = st.text_input("Your Name")
     stadium_name = st.text_input("Stadium Name")
     team_1 = st.text_input("Team 1 (e.g. Yankees)")
     team_2 = st.text_input("Team 2 (e.g. Red Sox)")
