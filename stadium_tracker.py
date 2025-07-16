@@ -6,12 +6,14 @@ import psycopg2
 
 def get_connection():
     return psycopg2.connect(
-        host="db.yguikznmzbkidxouchyf.supabase.co",
+        host="postgres.yguikznmzbkidxouchyf.supabase.co",
         dbname="postgres",
         user="postgres",
         password="Nevertolate24",
-        port="5432"
+        port="5432",
+        sslmode="require"
     )
+
 
 
 # --- Insert New Game ---
