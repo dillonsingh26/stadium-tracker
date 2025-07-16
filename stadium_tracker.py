@@ -43,7 +43,7 @@ def fetch_games(user):
     conn.close()
     import pandas as pd  # make sure this is at the top of your file
 
-return pd.DataFrame(rows, columns=["Stadium", "Team 1", "Team 2", "Winner", "Game Date"])
+    return pd.DataFrame(rows, columns=["Stadium", "Team 1", "Team 2", "Winner", "Game Date"])
 
 
 # --- Streamlit App ---
