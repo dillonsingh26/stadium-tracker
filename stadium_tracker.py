@@ -2,15 +2,17 @@ import streamlit as st
 import psycopg2
 from datetime import date
 
-# --- Database Connection ---
+import psycopg2
+
 def get_connection():
     return psycopg2.connect(
-        host="localhost",
-        database="stadium_tracker",
-        user="postgres",  # change if needed
-        password="yankees",  # update with your actual password
+        host="db.yguikznmzbkidxouchyf.supabase.co",
+        dbname="postgres",
+        user="postgres",
+        password="Nevertolate24",
         port="5432"
     )
+
 
 # --- Insert New Game ---
 def insert_game(user, stadium, team1, team2, winner, game_date):
