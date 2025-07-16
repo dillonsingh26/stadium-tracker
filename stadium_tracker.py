@@ -4,15 +4,18 @@ from datetime import date
 
 import psycopg2
 
+import psycopg2
+
 def get_connection():
     return psycopg2.connect(
         host="aws-0-us-east-2.pooler.supabase.com",
-        dbname="postgres",
-        user="postgres",  # <-- this is the key fix
-        password="#Nevertoolate24",
         port="6543",
-        sslmode="require"  # <-- necessary for remote connections
+        dbname="postgres",
+        user="postgres.yguikznmzbkidxouchyf",
+        password="#Nevertoolate24",
+        sslmode="require"
     )
+
 
 
 
